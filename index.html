@@ -1454,6 +1454,49 @@ print (fruits)
 frozenset({'Orange', 'Mango', 'Banana', 'Apple'})
 AttributeError: 'frozenset' object has no attribute 'append'
 
+<b>6. Boolean Type</b>
+Boolean एक data type है, जिसमे केवल दो ही value store की जा सकती है। जैसे – True एवं False. इस data type का use किसी expression की truth value को store करने के लिए किया जाता है। 
+<b>Example</b>
+<b>Input :</b> 1==1
+<b>Output :</b> True 
+
+<b>Q 10. WAP for Boolean.</b>
+a = True 
+print(type(a)) #type of a is boolean
+x = 5
+y = 10
+print(x>y) #False
+print(10>3) #True
+
+<b>Output</b>
+&lt;class 'bool'&gt;
+False
+True 
+
+<b>7. Binary Type</b> 
+Binary एक data type है, जिसका use binary data पर calculation करने के लिए किया जाता है। जैसे - 0 तथा 1.  
+1 byte में 8 bits (binary digits) होते है तथा एक binary number में 0 या 1 होता है। 
+Binary data type 3 प्रकार के होते है -
+1. Bytes
+2. Bytearray
+3. Memoryview
+<b>1. Bytes – </b>Python में bytes एक data type या function है, जिसका use object को bytes में convert करने के लिए किया जाता है। इस function में 3 arguments दिए जाते है। 
+
+<b>Syntax</b>
+bytes(x, encoding, error)
+x - जहा x एक integer variable है, जिसे byte में बदलना है 
+encoding - यह variables को bytes में convert करता है 
+error - यदि encoding fail होता है, तो यह error message display करता है 
+
+<b>Q 11. WAP for bytes data type</b>
+x = b"hello" # converting string to bytes
+print(x)
+print(type(x))
+
+<b>Output</b>
+b'hello'
+&lt;class 'bytes'&gt;
+
 </pre>
 </body>
 </html>
