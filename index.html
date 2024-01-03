@@ -1368,7 +1368,7 @@ dict5.pop("City") #mutable in nature
 print(dict5)
 
 <b>Output</b>
-&lt;class 'dict'&gt;
+<b>&lt;</b>class 'dict'<b>&gt;</b>
 {}
 {'Name': 'Ritesh'}
 {'Name': 'Gopal', 'Age': 35, 'Sname': 'Gopal'}
@@ -1397,8 +1397,8 @@ set1 ={"Ritesh", 41}
 print(type(set1))
 
 <b>Output</b>
-&lt;class 'dict'&gt;
-&lt;class 'set'&gt;
+<b>&lt;</b>class 'dict'<b>&gt;</b>
+<b>&lt;</b>class 'set'<b>&gt;</b>
 
 <b>5.1 Features of Set</b> 
 1. Set का nature mutable होता है अर्थात् set मे item को add, modify, delete किया जा सकता है।
@@ -1431,7 +1431,7 @@ print(type(set1))
 print(set1)
 
 <b>Output</b>
-&lt;class 'set'&gt;
+<b>&lt;</b>class 'set'<b>&gt;</b>
 set()
 
 <b>2. Frozenset - </b>Frozenset भी set के समान ही अलग अलग data items का collection होता है परन्तु frozenset immutable होता है अर्थात् frozenset को बनाने के बाद उसमें items को add, modify, delete नही किया जा सकता है।
@@ -1450,7 +1450,7 @@ fruits.append ("Graps") #error becouse frozenset is immutable
 print (fruits)
 
 <b>Output</b>
-&lt;class 'frozenset'&gt;
+<b>&lt;</b>class 'frozenset'<b>&gt;</b>
 frozenset({'Orange', 'Mango', 'Banana', 'Apple'})
 AttributeError: 'frozenset' object has no attribute 'append'
 
@@ -1469,7 +1469,7 @@ print(x>y) #False
 print(10>3) #True
 
 <b>Output</b>
-&lt;class 'bool'&gt;
+<b>&lt;</b>class 'bool'<b>&gt;</b>
 False
 True 
 
@@ -1484,9 +1484,9 @@ Binary data type 3 प्रकार के होते है -
 
 <b>Syntax</b>
 bytes(x, encoding, error)
-x - जहा x एक integer variable है, जिसे byte में बदलना है 
-encoding - यह variables को bytes में convert करता है 
-error - यदि encoding fail होता है, तो यह error message display करता है 
+x - जहा x एक integer variable है, जिसे byte में बदलना है। 
+encoding - यह variables को bytes में convert करता है। 
+error - यदि encoding fail होता है, तो यह error message display करता है। 
 
 <b>Q 11. WAP for bytes data type</b>
 x = b"hello" # converting string to bytes
@@ -1495,7 +1495,75 @@ print(type(x))
 
 <b>Output</b>
 b'hello'
-&lt;class 'bytes'&gt;
+<b>&lt;</b>class 'bytes'<b>&gt;</b>
+
+<b>2. Bytearray – </b>Bytearray function का use बहुत सारे bytes को एक साथ store करने के लिए किया जाता है, जबकि byte function एक single byte को store करता है। Bytearray function की range 0 से 256 होती है। I
+<b>Syntax </b>
+bytearray(source, encodingError)
+
+<b>Example</b>
+x = bytearray(15)
+उपरोक्त उदाहरण में 15 byte को store करेगा।
+
+<b>Q 12. WAP to create bytearray.</b>
+x = bytearray(15)
+print(type(x))
+print(x)
+
+<b>Output</b>
+<b>&lt;</b>class 'bytearray'<b>&gt;</b>
+bytearray(b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+
+<b>3. memoryview() – </b>Memoryview function का use object के लिए memory या space create करने के लिए किया जाता है अर्थात् यह function blank memory create करता है।
+<b>Syntax</b>
+memoryview(byte(size))
+
+<b>Example </b>
+memoryview(byte(15))
+
+<b>Q 13. WAP for memoryview().</b>
+x = memoryview(bytes(15))
+print(type(x))
+print(x)
+
+<b>Output</b>
+<b>&lt;</b>class 'memoryview'<b>&gt;</b>
+<b>&lt;</b>memory at 0x000002892BA64880<b>&gt;</b>
+
+<b>8. NoneType </b>
+None एक data type है जिसका अर्थ कुछ नही होता है, इसे null भी कहा जाता हैI None का अर्थ space, 0 या False नही होता है।  
+Python में  किसी variable को null value देने के लिए None keywords का use किया जाता है।
+
+<b>Q 14. WAP for NoneType.</b>
+x = None
+print(type(x))
+print(x)
+
+<b>Output</b>
+<b>&lt;</b>class 'NoneType'<b>&gt;</b>
+None
+
+<h3>1.11 Dynamically Typed and Strongly Typed Features of Python</h3><b>1. Dynamically Typed Language</b>
+Python एक dynamically typed language है, क्योकि python में किसी variable का data type पहले से नही देना होता है। जब python program interpret होता है, तब interpreter data type को अपने आप detect कर लेता है अर्थात् python में variable का data type run time पर पता चलता है तथा किसी variable को अलग अलग type की value देकर उसका type भी बदला जा सकता है, इसलिए python को Dynamically typed language कहा जाता है।  
+जबकि C, C++ तथा Java में variable का data type हमे run होने से पहले बताना होता है, इसलिए यह language statically typed language है। 
+
+<b>Q 1. WAP for Dynamically Typed Language.</b>
+x = 5
+print(type(x))
+x = 6.3
+print(type(x))
+x = 'Ritesh'
+print(type(x))
+x = True
+print(type(x))
+
+<b>Output</b>
+<b>&lt;</b>class 'int'<b>&gt;</b>
+<b>&lt;</b>class 'float'<b>&gt;</b>
+<b>&lt;</b>class 'str'<b>&gt;</b>  
+<b>&lt;</b>class 'bool'<b>&gt;</b>
+
+
 
 </pre>
 </body>
