@@ -1577,6 +1577,48 @@ print(type(x))
 <b>&lt;</b>class 'str'<b>&gt;</b>  
 <b>&lt;</b>class 'bool'<b>&gt;</b></div>
 
+<b>2. Strongly Typed Language – </b>Python एक strongly typed language है, क्योकि python में data की implicite type casting नही होती है, जबकि कुछ programming में data की implicite type casting हो जाती है, इसलिए उन्हें weakly typed language कहा जाता है।
+<b>उदाहरण के लिए</b> यदि python में  5 + 3 + 8 लिखेगे तो output 16 आएगा क्योकि ये सभी integer है, इसलिए type casting की आवश्यकता नही होती है परन्तु यदि 5 + "hello" लिखा जाता है,तो python program में error आयेगी क्योकि इसमें implicite type casting नही होगी इसलिए python को strongly typed language कहा जाता है।
+Programming language को उनके प्रकार के आधार पर बांटा गया है -
+ 
+<img src="./img/Dynamic.png" alt="">
+
+<h3>1.12 Input and Output Statement in python</h3>
+Python में input तथा output operation करने के लिए मुख्य दो function use किये जाते है - 
+1. input()
+2. output()
+<b>1. Input() – </b>यह एक function है, जिसका use program में अलग अलग data type (int, float, string) की value को input करने के लिए किया जाता है।
+
+<b>Syntax</b>
+Input(“prompt”)
+
+<b>Example</b>
+x = input(“Enter the value of x“) 
+
+
+<b>Q 1. WAP to input int and string using input().</b>
+name  = str(input("Enter your name")) #input string
+print(name)
+num  = int(input("Enter any number")) #input integer
+print(num)
+
+<b>Output</b>
+Enter your name ritesh
+ritesh
+Enter any number 15 
+15
+
+<b>Q 2. WAP to multiple input using one input().</b>
+a, b, c = map(int,input("Enter the numbers").split())
+print('value of a : ', a)
+print('value of b : ', b)
+print('value of c : ', c)
+
+<b>Output</b>
+Enter the numbers 5 10 15
+value of a : 5 
+value of b : 10
+value of c : 15
 
 
 </pre>
