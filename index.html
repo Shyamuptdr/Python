@@ -1650,7 +1650,133 @@ value of a : 5
 value of b : 10
 value of c : 15
 
+<b>2. Output - </b>Python में किसी statement को display कराने के लिए <b>print()</b> का use किया जाता है अर्थात् print() के द्वारा value या string को moniter पर display किया जाता है।
 
+<b>Syntax</b>
+print(object/values = separator = end = file = flush =)
+जहा -
+object - एक value है, जिसे display करना है। 
+seperator - एक से अधिक values को seperat करता है।
+end - इसका use \n \t के लिए किया जाता है।
+file and flush - दोनों optional होते है। 
+
+<b>Example</b>
+print(“Good Morning”)
+
+<b>Q 3. WAP for Output statement.</b>
+print("Good Morning")
+print("It's cold day today")
+
+<b>Output</b>
+Good Morning 
+It's cold day today
+
+<b>Q 4. WAP for Print() include end parameter.</b>
+print("Good Morning", end =" ")
+print("It's cold day today")
+
+<b>Output</b>
+Good Morning It's cold day today
+
+<h3 id="1.13">1.13 Variable In Python</h3>Variable का use python में values को store करने के लिए किया जाता है। Python programming में किसी भी variable को declare करने की आवश्यकता नही होती है, इसलिए हम इन्हें direct use कर सकते है। Python में variable case sensitive होते है।
+
+<b>Q 1. WAP for Variables declaration.</b>
+a = 5 #first variable
+A = 10 #second variable
+print(a)
+print(A)
+
+<b>Output</b>
+5
+10
+
+<b>1.13.1 Expressions In python</b> 
+Python में expression का use variable पर operation करने के लिए किया जाता है।
+जैसे - c = a + b
+<b>Example</b> 
+si = (p * r * t)/100
+
+<hr>
+
+<h1 id="chap2" class="chap">CHAPTER 2
+Data Structure</h1><h3 id="2.1">2.1 List Operations</h3>List एक data structure है, जो अलग अलग type के element का collection होता है अर्थात् list में हम एक समान data types या अलग अलग data types को एक साथ store कर सकते हैI List का nature mutable होता है। List को create करने के लिए square brackets <b>[ ]</b> का use किया जाता है। List पर अलग अलग operation करने के लिए अलग अलग methods का use किया जाता है, जो निम्न है -
+a. Append()
+b. Extend()
+c. Insert()
+d. Index()
+e. Remove()
+f. Pop()
+g. Count()
+h. Sort()
+i. Reverse()
+j. Copy() 
+
+<b>a. Append() - </b>यह एक method या function है, जिसका use list के end में item को  add करने के लिए किया जाता है।
+<b>Example – </b>list.append(item)
+
+<b>b. Extend() –</b>यह भी एक function है, जिसका use किसी दुसरे data types (list, tuple, string, dictionary etc.) के सभी items को list के end में add करने के लिए किया जाता है।
+<b>Example – </b>list.extend(otherList) 
+<b>* Note – </b>extend() का use string को characters में तोड़ने के लिए भी किया जाता है।
+
+<b>c. Insert() – </b>insert() का use  list में दी गई position पर item को insert करने के लिए किया जाता हैI इस function में हमे index भी देना होता है, जिस index पर हमे item को insert करना है।
+<b>Example – </b>list.insert(index, item)
+
+<b>d. Remove() - </b>remove() का use list में से किसी particular item को delete करने के लिए किया जाता है।
+<b>Example – </b>list.remove(item)
+
+<b>e. Pop() – </b>pop() का use list में से किसी element को pop (delete) करने के लिए किया जाता है। pop() list में से किसी दी गई position से item को remove करता है यदि position या index नही दिया जाता  है, तो यह list के last element को remove करेगा।
+<b>Example 1 – </b>list.pop(2)
+इससे list के 2nd index के item को remove करेगा।
+<b>Example 2 – </b>list.pop()
+इससे list के last item को remove करेगा।
+ 
+<b>f. Index() – </b>index() का use list में किसी item का index ज्ञात करने के लिए किया जाता है।
+<b>Example – </b>list.index(item)
+
+<b>g. Count() – </b>count() का use list में किसी item को count करने के लिए किया जाता है अर्थात् यह function हमे बताता है, कि list में item कितनी बार repeat हुआ है।
+<b>Example – </b>list.count(item)
+
+<b>h. Sort() – </b>sort() का use list को sort करने के लिए किया जाता है।
+<b>Example – </b>list.sort()
+
+<b>i. Reverse() – </b>reverse() का use list को reverse order में convert करने के लिए किया जाता है।
+<b>Example – </b>list.reverse()	
+
+<b>j. Clear() – </b>clear() का use list के सभी items को एक साथ delete करने के लिए किया जाता है अर्थात् जब हमे list को empty करना हो, तब हम इस function का use करते है।
+<b>Example – </b>list.clear()
+
+<b>Q 1. WAP to perform of list operations.</b>
+fruits=['mango','orange','apple']
+fruits.append('banana')#insert item to the last
+print(fruits)
+fruits.insert(2,'blackberry')#insert item on 2nd index
+print(fruits)
+fruits.remove('banana')#remove element “banana”
+print(fruits)
+fruits.pop()#pop last element,pop(1) using index
+print(fruits)
+print("print index of blckberry : ",(fruits.index('blackberry')))#print index of blackberry
+fruits.append('apple')
+fruits.append('apple')
+print(fruits)
+print("total couning of apple : ",(fruits.count('apple')))#counting apple in fruits
+fruits.sort()#sorting fruits
+print(fruits)
+fruits.reverse()#printing  reverse of fruits
+print(fruits)
+
+<b>Output</b>
+['mango', 'orange', 'apple', 'banana']
+['mango', 'orange', 'blackberry', 'apple', 'banana']
+['mango', 'orange', 'blackberry', 'apple']
+['mango', 'orange', 'blackberry']
+print index of blckberry : 2
+['mango', 'orange', 'blackberry', 'apple', 'apple']
+total couning of apple : 2
+['apple', 'apple', 'blackberry', 'mango', 'orange']
+['orange', 'mango', 'blackberry', 'apple', 'apple']
+
+  
 </pre>
 </body>
 </html>
