@@ -1794,7 +1794,68 @@ total couning of apple : 2
 ['apple', 'apple', 'blackberry', 'mango', 'orange']
 ['orange', 'mango', 'blackberry', 'apple', 'apple']
 
+<b>2.1.1 Slicing in Python</b>
+Python में list में से हम अपनी आवश्यकतानुसार element को निकाल सकते है अर्थात् list में से कुछ element को निकालने की process को slicing कहा जाता है।
+कई बार ऐसी परिस्थितिया आती है जब हमे list में से कुछ element निकालना होता है, तब हम slicing use करते है। इसके लिए colon <b>:</b> का use किया जाता है।
+<b>Syntax</b>
+list [Intial : End : IndexJump] 
+
+Python में indexing दो प्रकार की होती है –
+1. Positive Index -&gt; 0 to n-1
+2. Negative Index -&gt; n to -1
+
+<table>
+  <tr>
+    <td>Positive index</td>
+    <td>list[0]</td>
+    <td>list[1]</td>
+    <td>list[2]</td>
+    <td>list[3]</td>
+    <td>list[4]</td>
+    <td>list[5]</td> 
+  </tr>
+  <tr>
+    <td></td>
+    <td>10</td>
+    <td>50</td>
+    <td>60</td>
+    <td>90</td>
+    <td>80</td>
+    <td>30</td> 
+  </tr>
+  <tr>
+    <td>Negative index</td>
+    <td>list[-6]</td>
+    <td>list[-5]</td>
+    <td>list[-4]</td>
+    <td>list[-3]</td>
+    <td>list[-2]</td>
+    <td>list[-1]</td>
+  </tr>
+</table>
+
+<b>Q 2. WAP for  Slicing a list.</b>
+list1 = [10, 50, 60, 90, 80, 30]
+print(list1[:]) # print whole list
+print(list1[::]) # print whole list
+print(list1[3:]) # print 3rd index to last 
+print(list1[:2]) # print start to 2nd-1 index 
+print(list1[1:3]) # print 1st index to 3rd-1 index
+print(list1[0:5:2]) # print from index 0th to 5th step 2
+print(list1[-6:]) #print from last to first
+print(list1[-6:-1]) #print from index -6 to (-1st-1)
+
+<b>Output</b>
+[10, 50, 60, 90, 80, 30]
+[10, 50, 60, 90, 80, 30]
+[90, 80, 30]
+[10, 50]
+[50, 60]
+[10, 60, 80]
+[10, 50, 60, 90, 80, 30]
+[10, 50, 60, 90, 80]
+
+
 </pre>
 </body>
-
 </html>
