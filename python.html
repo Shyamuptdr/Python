@@ -1832,7 +1832,64 @@ print(list1[-6:-1]) #print from index -6 to (-1st-1)
 [10, 50, 60, 90, 80, 30]
 [10, 50, 60, 90, 80]
 
+<b>2.1.2  Copying a List</b>
+Python में list की copy दूसरी list में कर सकते है अर्थात् यदि हमे एक list के contents की आवश्यकता हमे दूसरी list में होती है, तो हम उसकी copy करते है। 
 
+Python में दो प्रकार की copy होती है-
+1. Deep Copy (deepcopy())
+2. Shallow Copy (copy())
+उपरोक्त दोनों functions का use करने के लिए हमे copy module को import करना होता है। 
+
+<b>1. Deep Copy – </b>Deep copy में यदि duplicate copy में change किया जाता है, तो उसका reflection original copy में नही होता है क्योकि यह परिवर्तन केवल उसकी value में होता है। Python में deep copy करने के लिए <b>deepcopy()</b> का use किया जाता है। 
+<b>Syntax</b>
+List = copy.deepcopy(list1)
+
+<b>Example</b>
+num1 = [[1, 2], [3, 4]]  # as a two dimensions array 
+num2 = num1.deepcopy(num1)
+
+<b>Q 1. WAP to copy using deep copy.</b>
+import copy
+list1 = [[1, 2], [3, 4]]  
+print(list1)
+cp = copy.deepcopy(list1)
+cp[0][0] = 45
+print("After copy :")
+print(list1) # will not be changed
+print(cp) # only change this list
+
+<b>Output</b>
+[[1, 2], [3, 4]]
+After copy :
+[[1, 2], [3, 4]]
+[[45, 2], [3, 4]]
+
+<b>2. Shallow Copy – </b>Shallow copy में यदि duplicate copy में परिवर्तन किया जाता है, तो इसका reflection original copy पर भी होता है क्युकि यह परिवर्तन उसके address पर होता है। 
+Shallow copy करने के लिए <b>copy()</b> का use किया जाता है। 
+<b>Syntax</b>
+list = copy.copy(list1)
+
+<b>Example</b>
+num1 = [[1, 2], [3, 4]]  #as a two dimensions array 
+num2 = num1.copy(num1)
+
+<b>Q 2. WAP to copy using shallow copy.</b>
+import copy
+list1 = [[1, 2], [3, 4]]  
+print(list1)
+cp = copy.copy(list1)
+cp[0][0] = 45
+print("After copy :")
+print(list1) # will be changed
+print(cp) # change both list
+
+<b>Output</b>
+[[1, 2], [3, 4]]
+After copy :
+[[45, 2], [3, 4]]
+[[45, 2], [3, 4]]
+
+ 
 </pre>
 </body>
 </html>
