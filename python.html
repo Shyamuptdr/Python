@@ -68,7 +68,7 @@
   <a href="#1.12">1.12 Input and Output Statement</a>
   <a href="#1.13">1.13 Variable In Python</a>
 <h4><a href="#chap2">Chapter 2 : Data Structure</a></h4>  <a href="#2.1">2.1 List operations</a>
-
+  <a href="#2.2">2.2 Tuple Operations</a>
 
 <h1 id="chap1" class="chap">CHAPTER 1 
 PYTHON BASIC</h1><h3 id="1.1">1.1 Python Introduction</h3>Python एक interpreted object oriented programming language है। Python बहुत popular, simple तथा सीखने में आसान programming language है, जिसमे हम सामान्य english में code करतें है। यह सामान्य english के code नये programmer को programming को सीखने तथा समझने में help करते है। जिसने programming नही सीखी है वह भी python को आसानी से सिख सकता है। Python ऐसे users के लिए उपयोगी है, जो सिर्फ अपना काम करना चाहते है। जैसे - Machine Learning, Web Development, Software Development, Data Science  इत्यादि क्युकि इसमें ज्यादा hard code नही करना होता है।  
@@ -1889,7 +1889,70 @@ After copy :
 [[45, 2], [3, 4]]
 [[45, 2], [3, 4]]
 
- 
+<b>2.1.3 List Comprehension</b>
+List Comprehension का अर्थ list का छोटा या संक्षिप्त करना होता है, जिसमे list के अन्दर ही direct operation किया जाता है अर्थात् जब list के elements पर कुछ operation या calculation किया जाता है, तब उसे list comprehension कहा जाता है। 
+<b>Example</b> 
+यदि list के सभी elements का square ज्ञात करना है तो हम निम्न प्रकार से कर सकते है –
+squares = [] # empty list
+for x in range(10): # 0 to 9
+  squares.append(x**2) # adding squares in list
+  print(squares) # printing list
+
+<b>Output</b>
+[0]
+[0, 1]
+[0, 1, 4]
+[0, 1, 4, 9]
+[0, 1, 4, 9, 16]
+[0, 1, 4, 9, 16, 25]
+[0, 1, 4, 9, 16, 25, 36]
+[0, 1, 4, 9, 16, 25, 36, 49]        
+[0, 1, 4, 9, 16, 25, 36, 49, 64]    
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+
+<h3 id="2.2">2.2 Tuple Operations</h3><b>1. Index() - </b>Tuple में index() का use elements को access करने के लिए किया जाता है। कई बार ऐसी परिस्थिति आती है, जिसमे हमे tuple के कुछ element को access करना होता है तब इसके लिए index() का use किया जाता है। 
+<b>Syntax </b>
+tuple.index(value)
+
+<b>Example</b>
+tuple.index(5)
+उपरोक्त उदाहरण से 5 का index print होगा।
+
+<b>Q 1. WAP to print index in tuple.</b>
+tuple1 = ("Ritesh",45000, "Gopal", 48000) #creating tuple
+print(tuple1.index("Gopal")) # print index of gopal
+print(tuple1.index(45000)) # print index of 45000
+vowels = ('a', 'e', 'i', 'o', 'u') # creating tuple
+print(vowels.index('u')) # print index of u
+
+<b>Output</b>
+2
+1
+4
+
+<b>* Note - </b>index() tuple में प्राप्त होने वाले पहले element का index ही print करता है। 
+
+<b>2. Count() – </b>count() किसी tuple में element की संख्या को count करता है अर्थात यह function बताता है, कि tuple में कोई item कितनी बार आया है। 
+<b>Syntax </b>
+tuple.count(element)
+
+<b>Example</b>
+tuple.count(5)
+उपरोक्त उदाहरण से 5 कितनी बार आया है, ये print होगा।
+
+<b>Q 2. WAP to print count a element in tuple.</b>
+tuple1 = (1, 4, 3, 2, 3, 1, 2, 3, 4, 2, 3)
+print("number of 3 in tuple",tuple1.count(3))
+lang = ("Java", "C++", "Python", "C++", "Python", "Java", "Python")
+print("number of Python in tuple",lang.count("Python"))
+
+<b>Output </b>
+number of 3 in tuple : 4
+number of Python in tuple : 3
+
+
+  
 </pre>
 </body>
 </html>
