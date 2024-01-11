@@ -69,6 +69,8 @@
   <a href="#1.13">1.13 Variable In Python</a>
 <h4><a href="#chap2">Chapter 2 : Data Structure</a></h4>  <a href="#2.1">2.1 List operations</a>
   <a href="#2.2">2.2 Tuple Operations</a>
+  <a href="#2.3">2.3 Dictionary Operations</a>
+
 
 <h1 id="chap1" class="chap">CHAPTER 1 
 PYTHON BASIC</h1><h3 id="1.1">1.1 Python Introduction</h3>Python एक interpreted object oriented programming language है। Python बहुत popular, simple तथा सीखने में आसान programming language है, जिसमे हम सामान्य english में code करतें है। यह सामान्य english के code नये programmer को programming को सीखने तथा समझने में help करते है। जिसने programming नही सीखी है वह भी python को आसानी से सिख सकता है। Python ऐसे users के लिए उपयोगी है, जो सिर्फ अपना काम करना चाहते है। जैसे - Machine Learning, Web Development, Software Development, Data Science  इत्यादि क्युकि इसमें ज्यादा hard code नही करना होता है।  
@@ -1950,6 +1952,44 @@ print("number of Python in tuple",lang.count("Python"))
 <b>Output </b>
 number of 3 in tuple : 4
 number of Python in tuple : 3
+
+<b>2.2.1 Use of Tuples as a Swap Function</b>
+Python में tuple की values को आपस में change करना swapping कहलाता है, परन्तु  tuple का nature immutable होता है इसलिए उसकी values को direct नही change किया जाता सकता है। 
+अत: हमे पहले tuple को list में convert करना होगा, इसके बाद elements को swap करना होगा तथा अंत में list को पुन: tuple में convert करना होता है। 
+
+<b>Q 3. WAP to swap tuple elements.</b>
+t = (1,2,3) #(1,3,2)
+print("Original tuple :",t)
+""" temp = t[1] // multiline comment
+t[1] = t[2]
+t[2] = temp
+print(t) can not change tuple elements so we convert tuple into list"""
+ls = list(t) # convert tuple to the list
+temp = ls[1]
+ls[1] = ls[2]
+ls[2] = temp
+t = tuple(ls) 
+print("After swapping :",t) # convert list to the tuple
+
+<b>Output</b>
+Original tuple : (1, 2, 3)
+After swapping : (1, 3, 2)
+
+<h3 id="2.3">2.3 Dictionary Operations</h3> Dictionary एक data structure है, जिसमे items को pairs (key-values) के रूप में store किया जाता है। Dictionary में duplicate key को store नही किया जाता है। Dictionary में curly braces का use किया जाता है। 
+<b>Example</b>
+Key : value
+student = {"Name" : "Shyam", "Age" : 25, "Gender" : "Male"}
+
+<b>Q 1. WAP for dictionary.</b>
+student = {"Name" : "Shyam", "Age" : 25, "Gender" : "Male"}
+print(student)
+print(student.keys())
+print(student.values())
+
+<b>Output</b>
+{'Name': 'Shyam', 'Age': 25, 'Gender': 'Male'}
+dict_keys(['Name', 'Age', 'Gender'])
+dict_values(['Shyam', 25, 'Male'])
 
 
   
